@@ -288,7 +288,7 @@ html[data-theme="light"] .bg-art { background:radial-gradient(60% 50% at 18% 18%
       <div class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round"><path d="M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2"/></svg></div>
       <div>
         <h1 class="font-d">AURA<span>.</span> <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,.45)">Faculty Portal</span></h1>
-        <small>python · fastapi · sqlite · <strong style="color:#c4b5fd">Faculty only</strong></small>
+        <small><strong style="color:#c4b5fd">Faculty only</strong></small>
       </div>
     </div>
     <div class="h-right">
@@ -358,7 +358,7 @@ async function boot() {
     user = d.user;
     const initials = user.name.replace(/^Dr\.\s*/, "").split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
     document.querySelector(".brand h1").innerHTML = `AURA<span>.</span> <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,.45)">${esc(user.college_name || "Faculty Portal")}</span>`;
-    document.querySelector(".brand small").innerHTML = `python · fastapi · sqlite · <strong style="color:#c4b5fd">Faculty portal</strong>`;
+    document.querySelector(".brand small").innerHTML = `<strong style="color:#c4b5fd">Faculty portal</strong>`;
     $("uchip").innerHTML = `<i>${esc(initials)}</i><span style="max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(user.name)}</span><span class="rr">teacher</span>`;
   } catch { window.location.href = "/"; return; }
   await refresh();
