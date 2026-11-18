@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="cv-ui-build" content="premium-university-layout-redesign-2026-11-15" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AURA — College Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#05060b;--ink:#eef0fb;--violet:#a78bfa;--cyan:#22d3ee;--green:#34d399;--rose:#fb7185}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(70% 65% at 10% 5%,rgba(109,40,217,.18),transparent 70%),radial-gradient(60% 55% at 90% 90%,rgba(8,145,178,.15),transparent 70%),var(--bg);font-family:Inter,system-ui,sans-serif;color:var(--ink);display:grid;place-items:center;padding:24px}.wrap{width:min(1040px,100%);display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}.hero,.panel{border:1px solid rgba(255,255,255,.09);background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.018));backdrop-filter:blur(18px);border-radius:28px;padding:34px}.hero{display:flex;flex-direction:column;justify-content:space-between;min-height:610px}.brand{display:flex;align-items:center;gap:13px}.logo{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(167,139,250,.42),rgba(34,211,238,.2));border:1px solid rgba(255,255,255,.13);font-size:21px}.brand h1{font-family:'Space Grotesk',sans-serif;font-size:19px;margin:0}.brand h1 span{color:var(--cyan)}.eyebrow{font:10px 'JetBrains Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#c4b5fd;margin:0 0 17px}.hero h2{font:600 clamp(32px,4vw,48px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:20px 0}.hero h2 em{font-style:normal;color:#a5f3fc}.lead{font-size:14px;line-height:1.8;color:rgba(238,240,251,.58);max-width:530px}.steps{display:grid;gap:11px;margin-top:28px}.step{display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:15px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}.num{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:rgba(167,139,250,.12);color:#ddd6fe;font:11px 'JetBrains Mono',monospace;flex-shrink:0}.step b{display:block;font-size:12.5px}.step small{display:block;color:rgba(238,240,251,.43);font-size:11.5px;line-height:1.55;margin-top:4px}.hint{color:rgba(255,255,255,.3);font:10px 'JetBrains Mono',monospace;letter-spacing:.08em;margin-top:25px}.panel{align-self:center;padding:27px}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:4px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.07);border-radius:13px;margin-bottom:24px}.tabs button{background:transparent;border:0;color:rgba(255,255,255,.45);padding:11px 7px;border-radius:10px;font-size:12px;font-weight:600;cursor:pointer}.tabs button.active{background:rgba(167,139,250,.14);color:#ede9fe;border:1px solid rgba(167,139,250,.25)}.panel h3{font:600 24px 'Space Grotesk',sans-serif;margin:0 0 7px}.sub{font-size:12px;line-height:1.7;color:rgba(238,240,251,.48);margin:0 0 22px}.field{margin-top:12px}.field label{display:block;font:9px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.13em;color:rgba(255,255,255,.42);margin:0 0 7px}.field input{width:100%;height:43px;padding:0 12px;border:1px solid rgba(255,255,255,.1);border-radius:11px;background:rgba(255,255,255,.035);color:#fff;font:12.5px Inter,sans-serif;outline:none}.field input:focus{border-color:rgba(167,139,250,.55)}.submit{width:100%;height:45px;border:0;border-radius:12px;margin-top:19px;background:linear-gradient(135deg,#a78bfa,#67e8f9);color:#070711;font:700 13px 'Space Grotesk',sans-serif;cursor:pointer}.submit:disabled{opacity:.55;cursor:wait}.err{display:none;margin-top:12px;border:1px solid rgba(251,113,133,.28);background:rgba(251,113,133,.08);padding:10px 12px;border-radius:11px;color:#fda4af;font-size:12px;line-height:1.5}.err.show{display:block}.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:20px;font-size:11px;color:rgba(255,255,255,.35)}a{color:#a5f3fc;text-decoration:none}a:hover{text-decoration:underline}.hidden{display:none!important}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}.hero{min-height:auto;padding:26px}.panel{padding:23px}.hero h2{font-size:36px}.hint{margin-top:30px}}
+
+/* CampusVoice Premium University theme — Light mode */
+:root { color-scheme: light; --cv-bg:#f3f6fb; --cv-surface:#ffffff; --cv-surface-2:#f8faff; --cv-ink:#172b49; --cv-muted:#63738b; --cv-line:#e2e9f3; --cv-blue:#24528d; --cv-blue-2:#3569a8; --cv-gold:#bd9148; --cv-shadow:0 14px 38px rgba(22,48,83,.075); }
+html[data-theme="light"] body { background:var(--cv-bg)!important; color:var(--cv-ink)!important; }
+html[data-theme="light"] body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 8% 0%,rgba(61,112,175,.10),transparent 35%),radial-gradient(ellipse at 95% 12%,rgba(197,158,91,.10),transparent 28%); }
+html[data-theme="light"] a { color:var(--cv-blue); }
+html[data-theme="light"] button, html[data-theme="light"] input, html[data-theme="light"] textarea, html[data-theme="light"] select { font-family:inherit; }
+html[data-theme="light"] :is(input,textarea,select) { color:var(--cv-ink)!important; background:#fff!important; border-color:var(--cv-line)!important; }
+html[data-theme="light"] :is(input,textarea,select)::placeholder { color:#94a1b3!important; }
+html[data-theme="light"] :is(input,textarea,select):focus { outline:none; border-color:#8eafd6!important; box-shadow:0 0 0 3px rgba(49,103,164,.10); }
+html[data-theme="light"] .cv-theme-toggle { color:#28466d; background:#fff; border:1px solid #dce5f0; box-shadow:0 5px 16px rgba(24,49,80,.08); }
+.cv-theme-toggle { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:35px; padding:0 12px; border-radius:11px; font:600 11px Inter,system-ui,sans-serif; letter-spacing:.01em; cursor:pointer; transition:background .2s,border-color .2s,transform .2s; white-space:nowrap; }
+.cv-theme-toggle:hover { transform:translateY(-1px); }
+html[data-theme="dark"] .cv-theme-toggle { color:#e7edf7; background:rgba(22,30,47,.92); border:1px solid rgba(255,255,255,.14); }
+.cv-theme-toggle svg { width:14px; height:14px; }
+
+/* Student and faculty page chrome */
+html[data-theme="light"] .top, html[data-theme="light"] .app > header { border-color:var(--cv-line)!important; }
+html[data-theme="light"] .brand h1, html[data-theme="light"] .brand h1 span { color:#18385f!important; }
+html[data-theme="light"] .brand p, html[data-theme="light"] .brand small { color:#72829a!important; }
+html[data-theme="light"] .logo { color:#fff!important; border:1px solid rgba(255,255,255,.24)!important; background:linear-gradient(145deg,#244f86,#4e78aa)!important; box-shadow:0 7px 18px rgba(36,79,134,.18)!important; }
+html[data-theme="light"] .btn, html[data-theme="light"] .small-btn, html[data-theme="light"] .icon-btn { color:#29486f!important; background:#fff!important; border:1px solid var(--cv-line)!important; box-shadow:0 2px 8px rgba(18,44,75,.035); }
+html[data-theme="light"] .btn:hover, html[data-theme="light"] .small-btn:hover { color:#173d70!important; border-color:#b9cce1!important; background:#f6f9fd!important; }
+html[data-theme="light"] .btn.primary, html[data-theme="light"] .btn-primary, html[data-theme="light"] .submit, html[data-theme="light"] .gate-submit { color:#fff!important; border:1px solid #214c82!important; background:linear-gradient(135deg,#214b7e,#356ba7)!important; box-shadow:0 8px 18px rgba(33,75,126,.18)!important; }
+html[data-theme="light"] .glass, html[data-theme="light"] .panel, html[data-theme="light"] .stat, html[data-theme="light"] .ds-card, html[data-theme="light"] .feed-item { background:#fff!important; color:var(--cv-ink)!important; border:1px solid var(--cv-line)!important; box-shadow:var(--cv-shadow); backdrop-filter:none!important; }
+html[data-theme="light"] .stats .stat { border-radius:17px!important; }
+html[data-theme="light"] .stat p, html[data-theme="light"] .stat .lbl, html[data-theme="light"] .sub, html[data-theme="light"] .ds-card .d, html[data-theme="light"] .feed-item .b, html[data-theme="light"] .feed-item time { color:var(--cv-muted)!important; }
+html[data-theme="light"] .stat b, html[data-theme="light"] .stat .num { color:#1b385e!important; }
+html[data-theme="light"] .tabs, html[data-theme="light"] .mode-pick, html[data-theme="light"] .input-pick { background:#edf2f8!important; border:1px solid #e0e8f2!important; }
+html[data-theme="light"] .tabs button, html[data-theme="light"] .mode-pick button, html[data-theme="light"] .input-pick button { color:#62738b!important; }
+html[data-theme="light"] .tabs button.on, html[data-theme="light"] .tabs button.active, html[data-theme="light"] .mode-pick button.on-m, html[data-theme="light"] .input-pick button.on-input { color:#1b487e!important; background:#fff!important; border:1px solid #dce6f1!important; box-shadow:0 2px 7px rgba(30,57,91,.07); }
+html[data-theme="light"] .banner { background:#f7f9fc!important; border:1px solid #e2e9f2!important; }
+html[data-theme="light"] .banner p, html[data-theme="light"] .banner b { color:#52647d!important; }
+html[data-theme="light"] .nf input, html[data-theme="light"] .nf textarea, html[data-theme="light"] .nf select, html[data-theme="light"] .ds-card textarea { color:#1d3555!important; background:#fbfcfe!important; border:1px solid #dfe7f1!important; }
+html[data-theme="light"] .nf select option { color:#1d3555; background:#fff; }
+html[data-theme="light"] .ds-card details { background:#f7f9fc!important; border:1px solid #e2e9f2!important; }
+html[data-theme="light"] .ds-card summary { color:#536781!important; }
+html[data-theme="light"] .ds-card pre { color:#35577e!important; border-color:#e2e9f2!important; }
+html[data-theme="light"] .user-chip { color:#294466!important; background:#f7f9fc!important; border-color:#e0e8f1!important; }
+html[data-theme="light"] .user-chip .rr { color:#7b899d!important; }
+html[data-theme="light"] .h2, html[data-theme="light"] .section-head h3, html[data-theme="light"] .panel h2, html[data-theme="light"] .ds-card h3 { color:#1a385f!important; }
+html[data-theme="light"] .feed-item .t { color:#1e3c63!important; }
+html[data-theme="light"] .del { color:#8a6470!important; }
+html[data-theme="light"] .result.ok { color:#176b4c!important; background:#edf9f3!important; border-color:#cdebdc!important; }
+html[data-theme="light"] .result.err { color:#9c3444!important; background:#fff1f2!important; border-color:#f4d2d7!important; }
+html[data-theme="light"] #bootay { background:#f4f7fb!important; color:#64758c!important; }
+
+/* Student portal */
+html[data-theme="light"] .wrap { color:var(--cv-ink)!important; }
+html[data-theme="light"] .hero { color:#fff!important; background:linear-gradient(120deg,#183b66,#2c5d91 72%,#3c6f9d)!important; border:1px solid rgba(255,255,255,.16)!important; box-shadow:0 18px 40px rgba(26,64,106,.16)!important; }
+html[data-theme="light"] .hero h2 { color:#fff!important; }
+html[data-theme="light"] .hero .sub, html[data-theme="light"] .hero p { color:rgba(255,255,255,.82)!important; }
+html[data-theme="light"] .hero .eyebrow { color:#eed6a5!important; }
+html[data-theme="light"] .clockbar, html[data-theme="light"] .clock-strip { color:var(--cv-ink)!important; background:linear-gradient(110deg,#fff,#f5f8fc)!important; border:1px solid #e1e9f2!important; box-shadow:var(--cv-shadow); }
+html[data-theme="light"] .clockvalue, html[data-theme="light"] .clock-time { color:#1c5487!important; }
+html[data-theme="light"] .clockdate, html[data-theme="light"] .clock-date { color:#425a78!important; }
+html[data-theme="light"] .clockzone, html[data-theme="light"] .clock-zone, html[data-theme="light"] .clockhint, html[data-theme="light"] .clock-note { color:#74849a!important; }
+html[data-theme="light"] .course, html[data-theme="light"] .item, html[data-theme="light"] .empty, html[data-theme="light"] .loading { color:#223c60!important; }
+html[data-theme="light"] .course { background:#fff!important; border:1px solid #e2e9f2!important; border-radius:16px!important; box-shadow:0 8px 22px rgba(24,52,86,.055); }
+html[data-theme="light"] .course h4, html[data-theme="light"] .item h4 { color:#203d64!important; }
+html[data-theme="light"] .code, html[data-theme="light"] .meta { color:#2e6396!important; }
+html[data-theme="light"] .chip { color:#536984!important; background:#f6f8fb!important; border-color:#e0e8f1!important; }
+html[data-theme="light"] .detail, html[data-theme="light"] .slot { color:#536780!important; }
+html[data-theme="light"] .slot span:last-child { color:#7b899b!important; }
+html[data-theme="light"] .item { border-color:#e8edf4!important; }
+html[data-theme="light"] .search { color:#1d3555!important; background:#fff!important; border-color:#dfe7f1!important; }
+html[data-theme="light"] .footer { color:#8491a3!important; }
+
+/* Main AURA voice console and central animated assistant */
+html[data-theme="light"] #bg { opacity:.035; }
+html[data-theme="light"] .app { background:transparent!important; }
+html[data-theme="light"] .app > header { padding-top:15px!important; padding-bottom:14px!important; border-bottom:1px solid #e2e9f2; }
+html[data-theme="light"] .brand small { color:#74839a!important; }
+html[data-theme="light"] .brand h1 span { color:#bd9148!important; }
+html[data-theme="light"] .stack-tag { color:#2b6c55!important; border-color:#cfe8da!important; background:#eff8f2!important; }
+html[data-theme="light"] .clock-strip { margin-top:10px!important; }
+html[data-theme="light"] main { gap:16px!important; padding:8px 18px 14px!important; }
+html[data-theme="light"] .stage { flex-basis:44%!important; border:1px solid #e2e9f2!important; border-radius:23px!important; background:linear-gradient(160deg,#fff,#f7f9fc)!important; box-shadow:var(--cv-shadow); }
+html[data-theme="light"] .console { border:1px solid #e2e9f2!important; border-radius:23px!important; background:#fff!important; box-shadow:var(--cv-shadow); overflow:hidden; }
+html[data-theme="light"] .ghost { -webkit-text-stroke:1.5px rgba(40,79,123,.06)!important; }
+html[data-theme="light"] .side-note { color:rgba(44,74,111,.24)!important; }
+html[data-theme="light"] .console-head { border-bottom:1px solid #edf1f6; }
+html[data-theme="light"] .console-head p { color:#77879b!important; }
+html[data-theme="light"] .feed { mask-image:none!important; }
+html[data-theme="light"] .msg .who { color:#2f5d8b!important; }
+html[data-theme="light"] .msg .intent { color:#9aa6b6!important; }
+html[data-theme="light"] .msg .text { color:#344964!important; }
+html[data-theme="light"] .msg.user .bubble { background:#eaf2fb!important; border:1px solid #d9e6f4!important; }
+html[data-theme="light"] .msg.user .text { color:#23466f!important; }
+html[data-theme="light"] .avatar { background:linear-gradient(135deg,#e6eef8,#dce9f6)!important; border:1px solid #d7e3f0!important; color:#2c5887!important; }
+html[data-theme="light"] .card { background:#fff!important; border:1px solid #e3eaf2!important; box-shadow:0 5px 15px rgba(22,48,83,.045); backdrop-filter:none!important; }
+html[data-theme="light"] .card-title, html[data-theme="light"] .room-code { color:#203e65!important; }
+html[data-theme="light"] .card-sub, html[data-theme="light"] .card-meta { color:#667991!important; }
+html[data-theme="light"] .card-sub svg { color:#8293a8!important; }
+html[data-theme="light"] .sq, html[data-theme="light"] .dateblock { background:#f3f7fb!important; color:#315d8a!important; border-color:#e0e8f1!important; }
+html[data-theme="light"] .dateblock b { color:#2b4f78!important; }
+html[data-theme="light"] .dateblock span { color:#78899d!important; }
+html[data-theme="light"] .sugg button, html[data-theme="light"] .chip { color:#536b86!important; border:1px solid #e0e8f1!important; background:#f7f9fc!important; }
+html[data-theme="light"] .sugg button:hover, html[data-theme="light"] .chip:hover { color:#214f83!important; border-color:#b9cce1!important; background:#edf3f9!important; }
+html[data-theme="light"] .composer-row { border-color:#e8edf4!important; background:#fbfcfe!important; }
+html[data-theme="light"] form#composer input { color:#203b5f!important; background:#fff!important; border:1px solid #dfe7f1!important; box-shadow:0 2px 8px rgba(28,52,80,.035); backdrop-filter:none!important; }
+html[data-theme="light"] form#composer input::placeholder { color:#8b9aae!important; }
+html[data-theme="light"] .round-btn { color:#315a85!important; border:1px solid #dfe7f1!important; background:#f6f9fc!important; }
+html[data-theme="light"] .round-btn.send.on { color:#fff!important; background:#2e6396!important; }
+html[data-theme="light"] .round-btn.mic.live { color:#fff!important; background:#2e8b6b!important; }
+html[data-theme="light"] .hint { color:#8694a6!important; }
+html[data-theme="light"] .gate-card { color:#1b3557!important; background:#fff!important; border:1px solid #e0e8f1!important; box-shadow:0 28px 80px rgba(25,49,79,.2)!important; }
+html[data-theme="light"] #gate { background:rgba(225,233,243,.72)!important; }
+html[data-theme="light"] .gate-logo h2 { color:#18395f!important; }
+html[data-theme="light"] .gate-logo h2 span { color:#bd9148!important; }
+html[data-theme="light"] .gate-logo small, html[data-theme="light"] .gate-helper, html[data-theme="light"] .gate-demos p { color:#73839a!important; }
+html[data-theme="light"] .gate-field svg { color:#8293a7!important; }
+html[data-theme="light"] .gate-field input { color:#203b5f!important; background:#fbfcfe!important; border:1px solid #dfe7f1!important; }
+html[data-theme="light"] .gate-field input::placeholder { color:#93a0b1!important; }
+html[data-theme="light"] .role-tabs { background:#f2f5f9!important; border-color:#e3eaf2!important; }
+html[data-theme="light"] .role-tabs button { color:#64758c!important; }
+html[data-theme="light"] .role-tabs button small { color:#8795a7!important; }
+html[data-theme="light"] .role-tabs button.on.student, html[data-theme="light"] .role-tabs button.on.teacher { color:#1f4d80!important; background:#fff!important; border-color:#dbe6f1!important; box-shadow:0 2px 7px rgba(25,54,89,.07); }
+html[data-theme="light"] .gate-demos { border-color:#e8edf4!important; }
+html[data-theme="light"] .gate-demos .d-s, html[data-theme="light"] .gate-demos .d-t { color:#31577f!important; background:#f5f8fc!important; border-color:#dfe8f2!important; }
+html[data-theme="light"] .gate-demos button small { color:#71839a!important; }
+html[data-theme="light"] .ticker { border-color:#e4eaf2!important; }
+html[data-theme="light"] .ticker .track button, html[data-theme="light"] .ticker .track b, html[data-theme="light"] .ticker .track span { color:#64758c!important; }
+
+/* College onboarding and admin portal */
+html[data-theme="light"] body:has(.steps) .hero { background:linear-gradient(145deg,#eaf1f8,#f8fafc)!important; border:1px solid #dfe8f2!important; color:#1b385d!important; box-shadow:var(--cv-shadow); }
+html[data-theme="light"] body:has(.steps) .hero h2 { color:#173a63!important; }
+html[data-theme="light"] body:has(.steps) .hero h2 em { color:#2f679c!important; }
+html[data-theme="light"] body:has(.steps) .lead { color:#5c7089!important; }
+html[data-theme="light"] .eyebrow { color:#9a753b!important; }
+html[data-theme="light"] .step { background:#fff!important; border:1px solid #e2e9f2!important; }
+html[data-theme="light"] .step b { color:#264362!important; }
+html[data-theme="light"] .step small, html[data-theme="light"] .hint { color:#74849a!important; }
+html[data-theme="light"] body:has(.steps) .num { color:#fff!important; background:#345f91!important; }
+html[data-theme="light"] .panel h3 { color:#193b63!important; }
+html[data-theme="light"] .field label { color:#667a94!important; }
+html[data-theme="light"] .field input { color:#203b5f!important; background:#fbfcfe!important; border:1px solid #dfe7f1!important; }
+html[data-theme="light"] .foot { color:#7d8ca0!important; }
+html[data-theme="light"] .foot a { color:#2f6092!important; }
+
+/* Central AI companion visual treatment */
+html[data-theme="light"] .assistant-intro { display:grid; gap:5px; text-align:center; margin-bottom:3px; position:relative; z-index:1; }
+html[data-theme="light"] .assistant-intro span { color:#9a783f; font:700 9px Inter,system-ui,sans-serif; letter-spacing:.2em; text-transform:uppercase; }
+html[data-theme="light"] .assistant-intro strong { color:#1d3e65; font:600 18px 'Space Grotesk',sans-serif; }
+html[data-theme="light"] .orb-btn { isolation:isolate; }
+html[data-theme="light"] .orb-btn::before { content:""; position:absolute; inset:8%; border-radius:50%; z-index:-1; background:radial-gradient(circle,rgba(72,132,190,.14),rgba(196,161,101,.08) 54%,transparent 72%); filter:blur(7px); animation:cvAuraPulse 4s ease-in-out infinite; }
+html[data-theme="light"] .orb-btn::after { content:""; position:absolute; inset:13%; border:1px solid rgba(54,103,155,.16); border-radius:50%; z-index:-1; animation:cvAuraRing 7s linear infinite; }
+html[data-theme="light"] canvas#orbC { filter:drop-shadow(0 15px 25px rgba(48,91,139,.2)); }
+@keyframes cvAuraPulse { 50% { transform:scale(1.08); opacity:.55; } }
+@keyframes cvAuraRing { to { transform:rotate(360deg) scale(1.06); } }
+@media(max-width:900px) { html[data-theme="light"] main { padding:8px 12px 12px!important; } html[data-theme="light"] .stage, html[data-theme="light"] .console { border-radius:18px!important; } }
+
+
+html[data-theme="light"] .bg-art { background:radial-gradient(60% 50% at 18% 18%,rgba(66,110,163,.09),transparent 70%),radial-gradient(55% 45% at 82% 15%,rgba(193,153,84,.07),transparent 70%),#f3f6fb!important; }
+.cv-theme-floating { position:fixed!important; top:16px; right:18px; z-index:120; }
+.cv-gate-theme { position:absolute!important; top:12px; right:12px; z-index:4; }
+
+</style>
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('campusvoice-theme')||'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+  <link rel="stylesheet" href="/static/premium-ui.css?v=20261115-layout-redesign">
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <div class="brand"><div class="logo">⌁</div><div><h1>AURA<span>.</span> College Portal</h1><div style="font:9px 'JetBrains Mono',monospace;color:rgba(255,255,255,.35);letter-spacing:.18em;margin-top:4px">INSTITUTION ONBOARDING</div></div></div>
+      <p class="eyebrow" style="margin-top:58px">Your campus · Your data · Your assistant</p>
+      <h2>Bring your college<br/>into the <em>conversation.</em></h2>
+      <p class="lead">Create a dedicated campus portal, add your own timetable, rooms, courses, faculty, notices and events, then share your college code with students and teachers so everyone gets answers from your institution's data.</p>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><div><b>Create your institution portal</b><small>Register the college and its first administrator account.</small></div></div>
+        <div class="step"><span class="num">02</span><div><b>Add your campus information</b><small>Use everyday text in the Upload Studio. No JSON required.</small></div></div>
+        <div class="step"><span class="num">03</span><div><b>Invite your community</b><small>Share the college code with students and the same code prefixed with <code>teach</code> with teachers during sign-up.</small></div></div>
+      </div>
+    </div>
+    <div class="hint">SEPARATE CAMPUS DATA STORE · COLLEGE-SCOPED ACCESS</div>
+  </section>
+  <section class="panel">
+    <div class="tabs"><button class="active" id="tab-register" type="button">Register college</button><button id="tab-login" type="button">Administrator login</button></div>
+    <h3 id="title">Create your portal</h3>
+    <p class="sub" id="subtitle">Start a dedicated workspace for your institution.</p>
+    <form id="form">
+      <div class="field" id="f-college"><label for="college">College / institution name</label><input id="college" autocomplete="organization" placeholder="e.g. Northbridge Institute of Technology" required /></div>
+      <div class="field" id="f-admin"><label for="admin">Administrator full name</label><input id="admin" autocomplete="name" placeholder="Full name" required /></div>
+      <div class="field"><label for="email">Administrator email</label><input id="email" type="email" autocomplete="email" placeholder="admin@yourcollege.edu" required /></div>
+      <div class="field" id="f-contact"><label for="contact">College contact email (optional)</label><input id="contact" type="email" autocomplete="organization" placeholder="office@yourcollege.edu" /></div>
+      <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required /></div>
+      <div class="err" id="err"></div>
+      <button class="submit" id="submit" type="submit">Create college portal</button>
+    </form>
+    <div class="foot"><a href="/">← Back to student / teacher login</a><span>Passwords are stored as salted hashes.</span></div>
+  </section>
+</div>
+<script>
+const $=id=>document.getElementById(id);let mode='register';
+function setMode(m){mode=m;$('tab-register').classList.toggle('active',m==='register');$('tab-login').classList.toggle('active',m==='login');$('title').textContent=m==='register'?'Create your portal':'Welcome back';$('subtitle').textContent=m==='register'?'Start a dedicated workspace for your institution.':'Sign in to manage your institution’s campus data.';$('f-college').classList.toggle('hidden',m==='login');$('f-admin').classList.toggle('hidden',m==='login');$('f-contact').classList.toggle('hidden',m==='login');$('college').required=m==='register';$('admin').required=m==='register';$('password').placeholder=m==='register'?'At least 8 characters':'Your administrator password';$('password').minLength=m==='register'?8:1;$('submit').textContent=m==='register'?'Create college portal':'Sign in to college portal';$('err').classList.remove('show')}
+$('tab-register').addEventListener('click',()=>setMode('register'));$('tab-login').addEventListener('click',()=>setMode('login'));
+$('form').addEventListener('submit',async e=>{e.preventDefault();$('submit').disabled=true;$('err').classList.remove('show');const payload=mode==='register'?{collegeName:$('college').value,adminName:$('admin').value,email:$('email').value,contactEmail:$('contact').value,password:$('password').value}:{email:$('email').value,password:$('password').value};try{const r=await fetch(mode==='register'?'/api/college/register':'/api/college/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok||!d.ok){$('err').textContent=d.error||'Could not complete request.';$('err').classList.add('show');return}window.location.replace('/college/portal')}catch{$('err').textContent='Cannot reach the server. Make sure the Python application is running.';$('err').classList.add('show')}finally{$('submit').disabled=false}});
+(async()=>{try{const r=await fetch('/api/auth/me',{cache:'no-store'});const d=await r.json();if(r.ok&&d.ok&&d.user.role==='college_admin')window.location.replace('/college/portal')}catch{}})();
+</script>
+<script>
+
+/* Persistent theme switch shared by all CampusVoice portals. */
+(() => {
+  const root = document.documentElement;
+  const current = () => root.getAttribute('data-theme') || 'light';
+  const apply = (theme) => {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('campusvoice-theme', theme); } catch (_) {}
+    document.querySelectorAll('.cv-theme-toggle').forEach((button) => {
+      const dark = theme === 'dark';
+      button.innerHTML = dark
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg> Light mode'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 13A8.7 8.7 0 0 1 11 3.2 8.9 8.9 0 1 0 20.8 13Z"/></svg> Dark mode';
+      button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      button.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    });
+  };
+  let saved = 'light';
+  try { saved = localStorage.getItem('campusvoice-theme') || 'light'; } catch (_) {}
+  apply(saved === 'dark' ? 'dark' : 'light');
+  const makeButton = (container, extraClass='') => {
+    if (!container || container.querySelector(':scope > .cv-theme-toggle')) return;
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'cv-theme-toggle ' + extraClass;
+    button.addEventListener('click', () => apply(current() === 'light' ? 'dark' : 'light'));
+    container.insertBefore(button, container.firstChild);
+    apply(current());
+  };
+  const header = document.querySelector('.hdr-right, .actions, .h-right');
+  if (header) makeButton(header);
+  else makeButton(document.body, 'cv-theme-floating');
+  const gateCard = document.querySelector('#gate .gate-card');
+  if (gateCard) makeButton(gateCard, 'cv-gate-theme');
+})();
+
+</script>
+
+<style>
+.cv-premium-edition-label{position:fixed;right:18px;bottom:16px;z-index:119;padding:7px 11px;border:1px solid rgba(189,145,72,.28);border-radius:999px;background:rgba(255,255,255,.88);color:#526783;font:700 9px Inter,system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;box-shadow:0 5px 18px rgba(28,52,82,.07);backdrop-filter:blur(10px)}
+html[data-theme="dark"] .cv-premium-edition-label{background:rgba(18,26,40,.88);color:#d4dfef;border-color:rgba(211,174,112,.28)}
+</style>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(!document.querySelector('.cv-premium-edition-label')){const e=document.createElement('div');e.className='cv-premium-edition-label';e.textContent='CampusVoice · Premium University';e.setAttribute('aria-label','CampusVoice Premium University interface');document.body.appendChild(e)}});</script>
+
+  <script src="/static/premium-ui.js?v=20261115-layout-redesign" defer></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: campusvoice-demo
+    runtime: python
+    plan: free
+    rootDir: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: AURA_DISABLE_DEMO_ACCOUNTS
+        value: "true"
+      - key: TZ
+        value: Asia/Kolkata

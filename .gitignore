@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# CampusVoice local/persistent data (never commit production data)
+python/campus.db
+python/tenants/
+python/*.db
+python/*.db-shm
+python/*.db-wal
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="cv-ui-build" content="premium-university-layout-redesign-2026-11-15">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Campus Portal — AURA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070912;--panel:#111524;--line:rgba(255,255,255,.09);--ink:#eef2ff;--muted:#9aa4b8;--cyan:#67e8f9;--violet:#c4b5fd;--green:#86efac;--amber:#fcd34d}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,rgba(34,211,238,.09),transparent 38%),radial-gradient(ellipse at 90% 10%,rgba(124,108,255,.12),transparent 32%),var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;min-height:100vh}.wrap{max-width:1400px;margin:0 auto;padding:26px 24px 50px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(103,232,249,.28);background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(124,108,255,.2));border-radius:14px;color:var(--cyan);font-size:22px}.brand h1{font:700 19px 'Space Grotesk',sans-serif;margin:0}.brand p{font-size:11px;color:var(--muted);margin:4px 0 0}.actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;padding:10px 14px;border-radius:11px;border:1px solid var(--line);background:#151a2a;color:var(--ink);font-weight:600;font-size:12px;cursor:pointer}.btn.primary{color:#041016;background:linear-gradient(135deg,#67e8f9,#22d3ee);border-color:transparent}.btn:hover{filter:brightness(1.08)}.hero{padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(124,108,255,.08)),rgba(16,20,34,.85);margin-bottom:22px}.eyebrow{font:10px 'JetBrains Mono',monospace;letter-spacing:.17em;text-transform:uppercase;color:var(--cyan)}h2{font:600 clamp(24px,3vw,36px) 'Space Grotesk',sans-serif;margin:10px 0 9px}.sub{color:var(--muted);line-height:1.6;margin:0;max-width:800px;font-size:14px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0 26px}.stat,.panel{background:rgba(17,21,36,.92);border:1px solid var(--line);border-radius:17px}.stat{padding:17px}.stat .num{font:600 28px 'Space Grotesk',sans-serif}.stat .lbl{font-size:11px;color:var(--muted);margin-top:4px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 12px}.section-head h3{font:600 20px 'Space Grotesk',sans-serif;margin:0}.section-head p{color:var(--muted);font-size:12px;margin:5px 0 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.course{padding:18px;position:relative;overflow:hidden}.course:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--course-color,#22d3ee)}.course h4{font:600 16px 'Space Grotesk',sans-serif;line-height:1.35;margin:0 0 7px}.code{font:10px 'JetBrains Mono',monospace;color:var(--cyan);letter-spacing:.08em}.chips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.chip{font-size:10px;padding:5px 8px;border-radius:7px;border:1px solid var(--line);color:#cbd5e1;background:rgba(255,255,255,.025)}.detail{font-size:12px;color:#c5cddd;line-height:1.7}.slots{border-top:1px solid var(--line);padding-top:10px;margin-top:12px}.slot{display:flex;justify-content:space-between;gap:10px;font-size:11px;line-height:1.6;padding:4px 0;color:#d8deeb}.slot span:last-child{text-align:right;color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{padding:19px}.list{display:grid;gap:10px}.item{padding:12px 0;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0;padding-bottom:0}.item h4{margin:0 0 5px;font-size:13px}.item p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.meta{font:10px 'JetBrains Mono',monospace;color:var(--cyan);margin-bottom:5px}.empty,.loading{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:13px;font-size:13px;line-height:1.6}.error{color:#fda4af}.search{width:min(280px,100%);background:#0b0e18;border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);outline:none}.search:focus{border-color:rgba(103,232,249,.5)}.section-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.footer{padding:26px 0 0;color:#6b7488;font-size:11px;text-align:center;line-height:1.7}.loadingline{height:3px;border-radius:6px;background:linear-gradient(90deg,transparent,var(--cyan),var(--violet),transparent);animation:load 1.2s linear infinite}@keyframes load{from{transform:translateX(-70%)}to{transform:translateX(70%)}}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.wrap{padding:18px 13px 34px}.hero{padding:20px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid,.two{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.search{width:100%}}
+.clockbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 18px;margin:0 0 20px;border:1px solid rgba(103,232,249,.18);border-radius:16px;background:linear-gradient(105deg,rgba(34,211,238,.08),rgba(124,108,255,.07)),rgba(17,21,36,.85)}.clockbar .clockvalue{font:600 22px 'JetBrains Mono',monospace;color:var(--cyan);white-space:nowrap}.clockbar .clockdate{font-size:13px;color:var(--ink)}.clockbar .clockzone{font:10px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}.clockbar .clockhint{margin-left:auto;color:var(--muted);font-size:11px}@media(max-width:700px){.clockbar{gap:8px}.clockbar .clockvalue{font-size:18px}.clockbar .clockhint{margin-left:0;width:100%}}
+
+/* CampusVoice Premium University theme — Light mode */
+:root { color-scheme: light; --cv-bg:#f3f6fb; --cv-surface:#ffffff; --cv-surface-2:#f8faff; --cv-ink:#172b49; --cv-muted:#63738b; --cv-line:#e2e9f3; --cv-blue:#24528d; --cv-blue-2:#3569a8; --cv-gold:#bd9148; --cv-shadow:0 14px 38px rgba(22,48,83,.075); }
+html[data-theme="light"] body { background:var(--cv-bg)!important; color:var(--cv-ink)!important; }
+html[data-theme="light"] body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 8% 0%,rgba(61,112,175,.10),transparent 35%),radial-gradient(ellipse at 95% 12%,rgba(197,158,91,.10),transparent 28%); }
+html[data-theme="light"] a { color:var(--cv-blue); }
+html[data-theme="light"] button, html[data-theme="light"] input, html[data-theme="light"] textarea, html[data-theme="light"] select { font-family:inherit; }
+html[data-theme="light"] :is(input,textarea,select) { color:var(--cv-ink)!important; background:#fff!important; border-color:var(--cv-line)!important; }
+html[data-theme="light"] :is(input,textarea,select)::placeholder { color:#94a1b3!important; }
+html[data-theme="light"] :is(input,textarea,select):focus { outline:none; border-color:#8eafd6!important; box-shadow:0 0 0 3px rgba(49,103,164,.10); }
+html[data-theme="light"] .cv-theme-toggle { color:#28466d; background:#fff; border:1px solid #dce5f0; box-shadow:0 5px 16px rgba(24,49,80,.08); }
+.cv-theme-toggle { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:35px; padding:0 12px; border-radius:11px; font:600 11px Inter,system-ui,sans-serif; letter-spacing:.01em; cursor:pointer; transition:background .2s,border-color .2s,transform .2s; white-space:nowrap; }
+.cv-theme-toggle:hover { transform:translateY(-1px); }
+html[data-theme="dark"] .cv-theme-toggle { color:#e7edf7; background:rgba(22,30,47,.92); border:1px solid rgba(255,255,255,.14); }
+.cv-theme-toggle svg { width:14px; height:14px; }
+
+/* Student and faculty page chrome */
+html[data-theme="light"] .top, html[data-theme="light"] .app > header { border-color:var(--cv-line)!important; }
+html[data-theme="light"] .brand h1, html[data-theme="light"] .brand h1 span { color:#18385f!important; }
+html[data-theme="light"] .brand p, html[data-theme="light"] .brand small { color:#72829a!important; }
+html[data-theme="light"] .logo { color:#fff!important; border:1px solid rgba(255,255,255,.24)!important; background:linear-gradient(145deg,#244f86,#4e78aa)!important; box-shadow:0 7px 18px rgba(36,79,134,.18)!important; }
+html[data-theme="light"] .btn, html[data-theme="light"] .small-btn, html[data-theme="light"] .icon-btn { color:#29486f!important; background:#fff!important; border:1px solid var(--cv-line)!important; box-shadow:0 2px 8px rgba(18,44,75,.035); }
+html[data-theme="light"] .btn:hover, html[data-theme="light"] .small-btn:hover { color:#173d70!important; border-color:#b9cce1!important; background:#f6f9fd!important; }
+html[data-theme="light"] .btn.primary, html[data-theme="light"] .btn-primary, html[data-theme="light"] .submit, html[data-theme="light"] .gate-submit { color:#fff!important; border:1px solid #214c82!important; background:linear-gradient(135deg,#214b7e,#356ba7)!important; box-shadow:0 8px 18px rgba(33,75,126,.18)!important; }
+html[data-theme="light"] .glass, html[data-theme="light"] .panel, html[data-theme="light"] .stat, html[data-theme="light"] .ds-card, html[data-theme="light"] .feed-item { background:#fff!important; color:var(--cv-ink)!important; border:1px solid var(--cv-line)!important; box-shadow:var(--cv-shadow); backdrop-filter:none!important; }
+html[data-theme="light"] .stats .stat { border-radius:17px!important; }
+html[data-theme="light"] .stat p, html[data-theme="light"] .stat .lbl, html[data-theme="light"] .sub, html[data-theme="light"] .ds-card .d, html[data-theme="light"] .feed-item .b, html[data-theme="light"] .feed-item time { color:var(--cv-muted)!important; }
+html[data-theme="light"] .stat b, html[data-theme="light"] .stat .num { color:#1b385e!important; }
+html[data-theme="light"] .tabs, html[data-theme="light"] .mode-pick, html[data-theme="light"] .input-pick { background:#edf2f8!important; border:1px solid #e0e8f2!important; }
+html[data-theme="light"] .tabs button, html[data-theme="light"] .mode-pick button, html[data-theme="light"] .input-pick button { color:#62738b!important; }
+html[data-theme="light"] .tabs button.on, html[data-theme="light"] .tabs button.active, html[data-theme="light"] .mode-pick button.on-m, html[data-theme="light"] .input-pick button.on-input { color:#1b487e!important; background:#fff!important; border:1px solid #dce6f1!important; box-shadow:0 2px 7px rgba(30,57,91,.07); }
+html[data-theme="light"] .banner { background:#f7f9fc!important; border:1px solid #e2e9f2!important; }
+html[data-theme="light"] .banner p, html[data-theme="light"] .banner b { color:#52647d!important; }
+html[data-theme="light"] .nf input, html[data-theme="light"] .nf textarea, html[data-theme="light"] .nf select, html[data-theme="light"] .ds-card textarea { color:#1d3555!important; background:#fbfcfe!important; border:1px solid #dfe7f1!important; }
+html[data-theme="light"] .nf select option { color:#1d3555; background:#fff; }
+html[data-theme="light"] .ds-card details { background:#f7f9fc!important; border:1px solid #e2e9f2!important; }
+html[data-theme="light"] .ds-card summary { color:#536781!important; }
+html[data-theme="light"] .ds-card pre { color:#35577e!important; border-color:#e2e9f2!important; }
+html[data-theme="light"] .user-chip { color:#294466!important; background:#f7f9fc!important; border-color:#e0e8f1!important; }
+html[data-theme="light"] .user-chip .rr { color:#7b899d!important; }
+html[data-theme="light"] .h2, html[data-theme="light"] .section-head h3, html[data-theme="light"] .panel h2, html[data-theme="light"] .ds-card h3 { color:#1a385f!important; }
+html[data-theme="light"] .feed-item .t { color:#1e3c63!important; }
+html[data-theme="light"] .del { color:#8a6470!important; }
+html[data-theme="light"] .result.ok { color:#176b4c!important; background:#edf9f3!important; border-color:#cdebdc!important; }
+html[data-theme="light"] .result.err { color:#9c3444!important; background:#fff1f2!important; border-color:#f4d2d7!important; }
+html[data-theme="light"] #bootay { background:#f4f7fb!important; color:#64758c!important; }
+
+/* Student portal */
+html[data-theme="light"] .wrap { color:var(--cv-ink)!important; }
+html[data-theme="light"] .hero { color:#fff!important; background:linear-gradient(120deg,#183b66,#2c5d91 72%,#3c6f9d)!important; border:1px solid rgba(255,255,255,.16)!important; box-shadow:0 18px 40px rgba(26,64,106,.16)!important; }
+html[data-theme="light"] .hero h2 { color:#fff!important; }
+html[data-theme="light"] .hero .sub, html[data-theme="light"] .hero p { color:rgba(255,255,255,.82)!important; }
+html[data-theme="light"] .hero .eyebrow { color:#eed6a5!important; }
+html[data-theme="light"] .clockbar, html[data-theme="light"] .clock-strip { color:var(--cv-ink)!important; background:linear-gradient(110deg,#fff,#f5f8fc)!important; border:1px solid #e1e9f2!important; box-shadow:var(--cv-shadow); }
+html[data-theme="light"] .clockvalue, html[data-theme="light"] .clock-time { color:#1c5487!important; }
+html[data-theme="light"] .clockdate, html[data-theme="light"] .clock-date { color:#425a78!important; }
+html[data-theme="light"] .clockzone, html[data-theme="light"] .clock-zone, html[data-theme="light"] .clockhint, html[data-theme="light"] .clock-note { color:#74849a!important; }
+html[data-theme="light"] .course, html[data-theme="light"] .item, html[data-theme="light"] .empty, html[data-theme="light"] .loading { color:#223c60!important; }
+html[data-theme="light"] .course { background:#fff!important; border:1px solid #e2e9f2!important; border-radius:16px!important; box-shadow:0 8px 22px rgba(24,52,86,.055); }
+html[data-theme="light"] .course h4, html[data-theme="light"] .item h4 { color:#203d64!important; }
+html[data-theme="light"] .code, html[data-theme="light"] .meta { color:#2e6396!important; }
+html[data-theme="light"] .chip { color:#536984!important; background:#f6f8fb!important; border-color:#e0e8f1!important; }
+html[data-theme="light"] .detail, html[data-theme="light"] .slot { color:#536780!important; }
+html[data-theme="light"] .slot span:last-child { color:#7b899b!important; }
+html[data-theme="light"] .item { border-color:#e8edf4!important; }
+html[data-theme="light"] .search { color:#1d3555!important; background:#fff!important; border-color:#dfe7f1!important; }
+html[data-theme="light"] .footer { color:#8491a3!important; }
+
+/* Main AURA voice console and central animated assistant */
+html[data-theme="light"] #bg { opacity:.035; }
+html[data-theme="light"] .app { background:transparent!important; }
+html[data-theme="light"] .app > header { padding-top:15px!important; padding-bottom:14px!important; border-bottom:1px solid #e2e9f2; }
+html[data-theme="light"] .brand small { color:#74839a!important; }
+html[data-theme="light"] .brand h1 span { color:#bd9148!important; }
+html[data-theme="light"] .stack-tag { color:#2b6c55!important; border-color:#cfe8da!important; background:#eff8f2!important; }
+html[data-theme="light"] .clock-strip { margin-top:10px!important; }
+html[data-theme="light"] main { gap:16px!important; padding:8px 18px 14px!important; }
+html[data-theme="light"] .stage { flex-basis:44%!important; border:1px solid #e2e9f2!important; border-radius:23px!important; background:linear-gradient(160deg,#fff,#f7f9fc)!important; box-shadow:var(--cv-shadow); }
+html[data-theme="light"] .console { border:1px solid #e2e9f2!important; border-radius:23px!important; background:#fff!important; box-shadow:var(--cv-shadow); overflow:hidden; }
+html[data-theme="light"] .ghost { -webkit-text-stroke:1.5px rgba(40,79,123,.06)!important; }
+html[data-theme="light"] .side-note { color:rgba(44,74,111,.24)!important; }
+html[data-theme="light"] .console-head { border-bottom:1px solid #edf1f6; }
+html[data-theme="light"] .console-head p { color:#77879b!important; }
+html[data-theme="light"] .feed { mask-image:none!important; }
+html[data-theme="light"] .msg .who { color:#2f5d8b!important; }
+html[data-theme="light"] .msg .intent { color:#9aa6b6!important; }
+html[data-theme="light"] .msg .text { color:#344964!important; }
+html[data-theme="light"] .msg.user .bubble { background:#eaf2fb!important; border:1px solid #d9e6f4!important; }
+html[data-theme="light"] .msg.user .text { color:#23466f!important; }
+html[data-theme="light"] .avatar { background:linear-gradient(135deg,#e6eef8,#dce9f6)!important; border:1px solid #d7e3f0!important; color:#2c5887!important; }
+html[data-theme="light"] .card { background:#fff!important; border:1px solid #e3eaf2!important; box-shadow:0 5px 15px rgba(22,48,83,.045); backdrop-filter:none!important; }
+html[data-theme="light"] .card-title, html[data-theme="light"] .room-code { color:#203e65!important; }
+html[data-theme="light"] .card-sub, html[data-theme="light"] .card-meta { color:#667991!important; }
+html[data-theme="light"] .card-sub svg { color:#8293a8!important; }
+html[data-theme="light"] .sq, html[data-theme="light"] .dateblock { background:#f3f7fb!important; color:#315d8a!important; border-color:#e0e8f1!important; }
+html[data-theme="light"] .dateblock b { color:#2b4f78!important; }
+html[data-theme="light"] .dateblock span { color:#78899d!important; }
+html[data-theme="light"] .sugg button, html[data-theme="light"] .chip { color:#536b86!important; border:1px solid #e0e8f1!important; background:#f7f9fc!important; }
+html[data-theme="light"] .sugg button:hover, html[data-theme="light"] .chip:hover { color:#214f83!important; border-color:#b9cce1!important; background:#edf3f9!important; }
+html[data-theme="light"] .composer-row { border-color:#e8edf4!important; background:#fbfcfe!important; }
+html[data-theme="light"] form#composer input { color:#203b5f!important; background:#fff!important; border:1px solid #dfe7f1!important; box-shadow:0 2px 8px rgba(28,52,80,.035); backdrop-filter:none!important; }
+html[data-theme="light"] form#composer input::placeholder { color:#8b9aae!important; }
+html[data-theme="light"] .round-btn { color:#315a85!important; border:1px solid #dfe7f1!important; background:#f6f9fc!important; }
+html[data-theme="light"] .round-btn.send.on { color:#fff!important; background:#2e6396!important; }
+html[data-theme="light"] .round-btn.mic.live { color:#fff!important; background:#2e8b6b!important; }
+html[data-theme="light"] .hint { color:#8694a6!important; }
+html[data-theme="light"] .gate-card { color:#1b3557!important; background:#fff!important; border:1px solid #e0e8f1!important; box-shadow:0 28px 80px rgba(25,49,79,.2)!important; }
+html[data-theme="light"] #gate { background:rgba(225,233,243,.72)!important; }
+html[data-theme="light"] .gate-logo h2 { color:#18395f!important; }
+html[data-theme="light"] .gate-logo h2 span { color:#bd9148!important; }
+html[data-theme="light"] .gate-logo small, html[data-theme="light"] .gate-helper, html[data-theme="light"] .gate-demos p { color:#73839a!important; }
+html[data-theme="light"] .gate-field svg { color:#8293a7!important; }
+html[data-theme="light"] .gate-field input { color:#203b5f!important; background:#fbfcfe!important; border:1px solid #dfe7f1!important; }
+html[data-theme="light"] .gate-field input::placeholder { color:#93a0b1!important; }
+html[data-theme="light"] .role-tabs { background:#f2f5f9!important; border-color:#e3eaf2!important; }
+html[data-theme="light"] .role-tabs button { color:#64758c!important; }
+html[data-theme="light"] .role-tabs button small { color:#8795a7!important; }
+html[data-theme="light"] .role-tabs button.on.student, html[data-theme="light"] .role-tabs button.on.teacher { color:#1f4d80!important; background:#fff!important; border-color:#dbe6f1!important; box-shadow:0 2px 7px rgba(25,54,89,.07); }
+html[data-theme="light"] .gate-demos { border-color:#e8edf4!important; }
+html[data-theme="light"] .gate-demos .d-s, html[data-theme="light"] .gate-demos .d-t { color:#31577f!important; background:#f5f8fc!important; border-color:#dfe8f2!important; }
+html[data-theme="light"] .gate-demos button small { color:#71839a!important; }
+html[data-theme="light"] .ticker { border-color:#e4eaf2!important; }
+html[data-theme="light"] .ticker .track button, html[data-theme="light"] .ticker .track b, html[data-theme="light"] .ticker .track span { color:#64758c!important; }
+
+/* College onboarding and admin portal */
+html[data-theme="light"] body:has(.steps) .hero { background:linear-gradient(145deg,#eaf1f8,#f8fafc)!important; border:1px solid #dfe8f2!important; color:#1b385d!important; box-shadow:var(--cv-shadow); }
+html[data-theme="light"] body:has(.steps) .hero h2 { color:#173a63!important; }
+html[data-theme="light"] body:has(.steps) .hero h2 em { color:#2f679c!important; }
+html[data-theme="light"] body:has(.steps) .lead { color:#5c7089!important; }
+html[data-theme="light"] .eyebrow { color:#9a753b!important; }
+html[data-theme="light"] .step { background:#fff!important; border:1px solid #e2e9f2!important; }
+html[data-theme="light"] .step b { color:#264362!important; }
+html[data-theme="light"] .step small, html[data-theme="light"] .hint { color:#74849a!important; }
+html[data-theme="light"] body:has(.steps) .num { color:#fff!important; background:#345f91!important; }
+html[data-theme="light"] .panel h3 { color:#193b63!important; }
+html[data-theme="light"] .field label { color:#667a94!important; }
+html[data-theme="light"] .field input { color:#203b5f!important; background:#fbfcfe!important; border:1px solid #dfe7f1!important; }
+html[data-theme="light"] .foot { color:#7d8ca0!important; }
+html[data-theme="light"] .foot a { color:#2f6092!important; }
+
+/* Central AI companion visual treatment */
+html[data-theme="light"] .assistant-intro { display:grid; gap:5px; text-align:center; margin-bottom:3px; position:relative; z-index:1; }
+html[data-theme="light"] .assistant-intro span { color:#9a783f; font:700 9px Inter,system-ui,sans-serif; letter-spacing:.2em; text-transform:uppercase; }
+html[data-theme="light"] .assistant-intro strong { color:#1d3e65; font:600 18px 'Space Grotesk',sans-serif; }
+html[data-theme="light"] .orb-btn { isolation:isolate; }
+html[data-theme="light"] .orb-btn::before { content:""; position:absolute; inset:8%; border-radius:50%; z-index:-1; background:radial-gradient(circle,rgba(72,132,190,.14),rgba(196,161,101,.08) 54%,transparent 72%); filter:blur(7px); animation:cvAuraPulse 4s ease-in-out infinite; }
+html[data-theme="light"] .orb-btn::after { content:""; position:absolute; inset:13%; border:1px solid rgba(54,103,155,.16); border-radius:50%; z-index:-1; animation:cvAuraRing 7s linear infinite; }
+html[data-theme="light"] canvas#orbC { filter:drop-shadow(0 15px 25px rgba(48,91,139,.2)); }
+@keyframes cvAuraPulse { 50% { transform:scale(1.08); opacity:.55; } }
+@keyframes cvAuraRing { to { transform:rotate(360deg) scale(1.06); } }
+@media(max-width:900px) { html[data-theme="light"] main { padding:8px 12px 12px!important; } html[data-theme="light"] .stage, html[data-theme="light"] .console { border-radius:18px!important; } }
+
+
+html[data-theme="light"] .bg-art { background:radial-gradient(60% 50% at 18% 18%,rgba(66,110,163,.09),transparent 70%),radial-gradient(55% 45% at 82% 15%,rgba(193,153,84,.07),transparent 70%),#f3f6fb!important; }
+.cv-theme-floating { position:fixed!important; top:16px; right:18px; z-index:120; }
+.cv-gate-theme { position:absolute!important; top:12px; right:12px; z-index:4; }
+
+</style>
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('campusvoice-theme')||'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+  <link rel="stylesheet" href="/static/premium-ui.css?v=20261115-layout-redesign">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">⌁</div><div><h1>AURA <span style="color:var(--cyan)">·</span> Student Campus</h1><p id="college-sub">Loading your college…</p></div></div>
+    <div class="actions"><a class="btn primary" href="/">◉ Open Voice Assistant</a><button class="btn" id="refresh">↻ Refresh data</button><button class="btn" id="logout">⇥ Logout</button></div>
+  </header>
+  <section class="clockbar" role="status" aria-label="Current date and time in India"><div aria-hidden="true" style="color:var(--cyan);font-size:22px">◷</div><div><div class="clockvalue" id="student-clock-time">--:--:--</div><div class="clockzone">India Standard Time · IST</div></div><div class="clockdate" id="student-clock-date">Loading date…</div><div class="clockhint">Live campus time</div></section>
+  <section class="hero"><div class="eyebrow">Student dashboard · live campus records</div><h2 id="welcome">Welcome to your campus</h2><p class="sub" id="intro">Loading course catalogue, timetable, notices, events, faculty and room information from your college.</p></section>
+  <div id="loading"><div class="loadingline"></div><p class="loading">Loading campus data…</p></div>
+  <div id="dashboard" style="display:none">
+    <div class="stats">
+      <div class="stat"><div class="num" id="count-courses">0</div><div class="lbl">Courses listed</div></div>
+      <div class="stat"><div class="num" id="count-rooms">0</div><div class="lbl">Rooms & facilities</div></div>
+      <div class="stat"><div class="num" id="count-notices">0</div><div class="lbl">Current notices</div></div>
+      <div class="stat"><div class="num" id="count-events">0</div><div class="lbl">Upcoming events</div></div>
+    </div>
+    <section>
+      <div class="section-head"><div><h3>Course catalogue</h3><p>Actual course titles and details uploaded by your college.</p></div><div class="section-controls"><input id="course-search" class="search" placeholder="Search course, code, faculty or department…" aria-label="Search courses"></div></div>
+      <div id="courses" class="grid"></div>
+    </section>
+    <div class="two">
+      <section><div class="section-head"><div><h3>Campus notices</h3><p>Announcements published by your institution.</p></div></div><div id="notices" class="panel list"></div></section>
+      <section><div class="section-head"><div><h3>Upcoming events</h3><p>Events from your college calendar.</p></div></div><div id="events" class="panel list"></div></section>
+    </div>
+    <div class="two">
+      <section><div class="section-head"><div><h3>Faculty directory</h3><p>Names, departments and contact information.</p></div></div><div id="faculty" class="panel list"></div></section>
+      <section><div class="section-head"><div><h3>Rooms & facilities</h3><p>Locations and room details from campus records.</p></div></div><div id="rooms" class="panel list"></div></section>
+    </div>
+    <section><div class="section-head"><div><h3>Timetable overview</h3><p>Every scheduled class attached to the uploaded courses.</p></div></div><div id="timetable" class="panel list"></div></section>
+  </div>
+  <div id="error" class="empty error" style="display:none"></div>
+  <footer class="footer">Displayed records come from your college's AURA database. Course catalogue entries are not an official personal enrollment transcript unless your college uploads student-specific enrollment data.</footer>
+</div>
+<script>
+'use strict';
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const days = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+function updateStudentClock(){const now=new Date();const t=document.getElementById('student-clock-time');const d=document.getElementById('student-clock-date');if(t)t.textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}).format(now);if(d)d.textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(now);}
+updateStudentClock();setInterval(updateStudentClock,1000);
+let campusData = null;
+function fmtTime(v){if(!v)return '';const [h,m]=String(v).split(':').map(Number);const ap=h>=12?'PM':'AM';const hh=h%12||12;return `${hh}:${String(m||0).padStart(2,'0')} ${ap}`;}
+function fmtDate(v){if(!v)return 'Date not specified';const d=new Date(v);return Number.isNaN(d.getTime())?esc(v):d.toLocaleString([], {weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});}
+function empty(text){return `<div class="empty">${esc(text)}</div>`;}
+function renderCourses(filter=''){
+ const query=filter.toLowerCase().trim();
+ const rows=(campusData?.courses||[]).filter(c=>[c.title,c.code,c.department,c.professor,c.section,c.semester,c.credits].some(v=>String(v??'').toLowerCase().includes(query)));
+ $('courses').innerHTML=rows.length?rows.map(c=>{
+   const slots=(c.slots||[]).slice().sort((a,b)=>(a.day_of_week-b.day_of_week)||String(a.start_time).localeCompare(String(b.start_time)));
+   return `<article class="panel course" style="--course-color:${/^#[0-9a-f]{6}$/i.test(c.color||'')?c.color:'#22d3ee'}"><div class="code">${esc(c.code)}</div><h4>${esc(c.title||'Untitled course')}</h4><div class="detail">${esc(c.department||'Department not provided')}</div><div class="chips"><span class="chip">${esc(c.credits??'—')} credits</span><span class="chip">Semester ${esc(c.semester??'—')}</span><span class="chip">Section ${esc(c.section||'—')}</span></div><div class="detail"><strong>Faculty:</strong> ${esc(c.professor||'Not assigned')}</div>${slots.length?`<div class="slots">${slots.map(t=>`<div class="slot"><span>${esc(days[t.day_of_week]||'Day TBD')} · ${esc(fmtTime(t.start_time))}–${esc(fmtTime(t.end_time))}</span><span>${esc(t.room_code||'Room TBD')}</span></div>`).join('')}</div>`:`<div class="slots detail">No timetable slots uploaded yet.</div>`}</article>`;
+ }).join(''):empty(query?'No courses match your search.':'Your college has not uploaded course records yet. Ask your college administrator to add the course catalogue in the College Portal.');
+}
+function renderList(id, rows, render, blank){$(id).innerHTML=rows.length?rows.map(render).join(''):empty(blank);}
+function renderAll(){
+ const d=campusData;$('loading').style.display='none';$('error').style.display='none';$('dashboard').style.display='block';
+ $('college-sub').textContent=`${d.college?.name||'Your college'} · College code ${d.college?.code||'—'}`;
+ $('count-courses').textContent=d.courses.length;$('count-rooms').textContent=d.rooms.length;$('count-notices').textContent=d.notices.length;$('count-events').textContent=d.events.filter(e=>new Date(e.starts_at)>=new Date()).length;
+ $('intro').textContent=`Browse the course names, faculty, timetable, notices, events, and facilities currently published by ${d.college?.name||'your college'}.`;
+ renderCourses($('course-search').value);
+ renderList('notices',d.notices,(n)=>`<div class="item"><div class="meta">${esc(String(n.category||'notice').toUpperCase())}${n.pinned?' · PINNED':''} · ${esc(fmtDate(n.published_at))}</div><h4>${esc(n.title)}</h4><p>${esc(n.body)}</p></div>`,'No notices have been published yet.');
+ const now=Date.now();const upcoming=d.events.filter(e=>new Date(e.starts_at).getTime()>=now);
+ renderList('events',upcoming,(e)=>`<div class="item"><div class="meta">${esc(fmtDate(e.starts_at))} · ${esc(e.category||'event')}</div><h4>${esc(e.title)}</h4><p>${esc(e.description||'')}${e.location?' · '+esc(e.location):''}${e.organizer?' · Organized by '+esc(e.organizer):''}</p></div>`,'No upcoming events have been published.');
+ renderList('faculty',d.faculty,(f)=>`<div class="item"><h4>${esc(f.name)} · ${esc(f.title||'Faculty')}</h4><p>${esc(f.department||'Department not specified')}<br>${esc(f.email||'Email not provided')}<br>${esc(f.office||'Office not specified')}<br>${esc(f.office_hours||'Office hours not provided')}</p></div>`,'No faculty records have been uploaded yet.');
+ renderList('rooms',d.rooms,(r)=>`<div class="item"><div class="meta">${esc(r.code)} · ${esc(r.type||'room')} · Capacity ${esc(r.capacity??'—')}</div><h4>${esc(r.name||r.code)}</h4><p>${esc(r.block||'Block not specified')} · Floor ${esc(r.floor??'—')}${r.meta?' · '+esc(r.meta):''}</p></div>`,'No room or facility records have been uploaded yet.');
+ const slots=[];for(const c of d.courses){for(const s of (c.slots||[])){slots.push({...s,title:c.title,code:c.code,professor:c.professor});}}
+ slots.sort((a,b)=>(a.day_of_week-b.day_of_week)||String(a.start_time).localeCompare(String(b.start_time)));
+ renderList('timetable',slots,(t)=>`<div class="item"><div class="meta">${esc(days[t.day_of_week]||'Day TBD')} · ${esc(fmtTime(t.start_time))}–${esc(fmtTime(t.end_time))}</div><h4>${esc(t.title||t.course_code)} <span class="code">${esc(t.course_code)}</span></h4><p>${esc(t.room_code||'Room TBD')} · ${esc(t.professor||'Faculty not assigned')}</p></div>`,'No timetable slots have been uploaded yet.');
+}
+async function load(){
+ $('loading').style.display='block';$('dashboard').style.display='none';$('error').style.display='none';
+ try{
+  const meRes=await fetch('/api/auth/me',{cache:'no-store'});
+  if(meRes.status===401){location.replace('/');return;}
+  const me=await meRes.json();if(!me.ok){location.replace('/');return;}
+  if(me.user.role==='teacher'){location.replace('/teacher');return;}if(me.user.role==='college_admin'){location.replace('/college/portal');return;}
+  $('welcome').textContent=`Welcome, ${me.user.name}`;
+  const dataRes=await fetch('/api/data',{cache:'no-store'});if(dataRes.status===401){location.replace('/');return;}const data=await dataRes.json();if(!data.ok)throw new Error(data.error||'Could not load campus records.');campusData=data;renderAll();
+ }catch(e){$('loading').style.display='none';$('error').style.display='block';$('error').textContent=`Unable to load your campus data: ${e.message||'Please retry.'}`;}
+}
+$('course-search').addEventListener('input',e=>renderCourses(e.target.value));$('refresh').addEventListener('click',load);
+$('logout').addEventListener('click',async()=>{try{await fetch('/api/auth/logout',{method:'POST'});}catch{}location.replace('/');});
+load();
+</script>
+<script>
+
+/* Persistent theme switch shared by all CampusVoice portals. */
+(() => {
+  const root = document.documentElement;
+  const current = () => root.getAttribute('data-theme') || 'light';
+  const apply = (theme) => {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('campusvoice-theme', theme); } catch (_) {}
+    document.querySelectorAll('.cv-theme-toggle').forEach((button) => {
+      const dark = theme === 'dark';
+      button.innerHTML = dark
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg> Light mode'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 13A8.7 8.7 0 0 1 11 3.2 8.9 8.9 0 1 0 20.8 13Z"/></svg> Dark mode';
+      button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      button.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    });
+  };
+  let saved = 'light';
+  try { saved = localStorage.getItem('campusvoice-theme') || 'light'; } catch (_) {}
+  apply(saved === 'dark' ? 'dark' : 'light');
+  const makeButton = (container, extraClass='') => {
+    if (!container || container.querySelector(':scope > .cv-theme-toggle')) return;
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'cv-theme-toggle ' + extraClass;
+    button.addEventListener('click', () => apply(current() === 'light' ? 'dark' : 'light'));
+    container.insertBefore(button, container.firstChild);
+    apply(current());
+  };
+  const header = document.querySelector('.hdr-right, .actions, .h-right');
+  if (header) makeButton(header);
+  else makeButton(document.body, 'cv-theme-floating');
+  const gateCard = document.querySelector('#gate .gate-card');
+  if (gateCard) makeButton(gateCard, 'cv-gate-theme');
+})();
+
+</script>
+
+<style>
+.cv-premium-edition-label{position:fixed;right:18px;bottom:16px;z-index:119;padding:7px 11px;border:1px solid rgba(189,145,72,.28);border-radius:999px;background:rgba(255,255,255,.88);color:#526783;font:700 9px Inter,system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;box-shadow:0 5px 18px rgba(28,52,82,.07);backdrop-filter:blur(10px)}
+html[data-theme="dark"] .cv-premium-edition-label{background:rgba(18,26,40,.88);color:#d4dfef;border-color:rgba(211,174,112,.28)}
+</style>
+<script>document.addEventListener('DOMContentLoaded',()=>{if(!document.querySelector('.cv-premium-edition-label')){const e=document.createElement('div');e.className='cv-premium-edition-label';e.textContent='CampusVoice · Premium University';e.setAttribute('aria-label','CampusVoice Premium University interface');document.body.appendChild(e)}});</script>
+
+  <script src="/static/premium-ui.js?v=20261115-layout-redesign" defer></script>
+</body>
+</html>
