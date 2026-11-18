@@ -282,19 +282,29 @@ def verify_password(password: str, salt: str, expected_hash: str) -> bool:
 # ---------------------------------------------------------------------- seed
 
 def _seed_users_if_empty(conn: sqlite3.Connection, college_id: int = 1) -> None:
-    row = conn.execute("SELECT COUNT(*) AS n FROM users").fetchone()
-    if row["n"] > 0:
-        return
-    s_h, s_s = hash_password("student123")
-    t_h, t_s = hash_password("teacher123")
-    conn.execute(
-        "INSERT OR IGNORE INTO users (email,name,role,pass_hash,salt,college_id) VALUES (?,?,?,?,?,?)",
-        ("student@astra.edu", "Riya Sharma", "student", s_h, s_s, college_id),
-    )
-    conn.execute(
-        "INSERT OR IGNORE INTO users (email,name,role,pass_hash,salt,college_id) VALUES (?,?,?,?,?,?)",
-        ("teacher@astra.edu", "Dr. Arjun Mehta", "teacher", t_h, t_s, college_id),
-    )
+    demo_users = [
+        ("student@astra.edu", "Riya Sharma", "student", "student123"),
+        ("teacher@astra.edu", "Dr. Arjun Mehta", "teacher", "teacher123"),
+    ]
+
+    for email, name, role, password in demo_users:
+        existing = conn.execute(
+            "SELECT id FROM users WHERE email = ?",
+            (email,)
+        ).fetchone()
+
+        if existing:
+            continue
+
+        pass_hash, salt = hash_password(password)
+
+        conn.execute(
+            """INSERT INTO users
+            (email, name, role, pass_hash, salt, college_id)
+            VALUES (?, ?, ?, ?, ?, ?)""",
+            (email, name, role, pass_hash, salt, college_id)
+        )
+
     conn.commit()
 
 
